@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Abrir la pagina para  la compra de productos personales" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-23T14:40:10" hostname="DESKTOP-V4BNGPO" time="49.176">
+  <properties/>
+  <testcase name="Abrir la pagina de  pruebas" classname="Abrir la pagina para  la compra de productos personales" time="49.176"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947}) on port 29134
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Nov 23, 2021 9:40:46 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

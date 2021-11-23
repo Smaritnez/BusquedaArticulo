@@ -1,0 +1,165 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Abrir la pagina de  pruebas",
+        "description": "",
+        "id": "abrir-la-pagina-para--la-compra-de-productos-personales;abrir-la-pagina-de--pruebas",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 24085145201,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Se abrira la pagina para el registro del nuevo usuario",
+            "match": {
+              "location": "PaginaPruebaSteps.clic_abrir_pagina_para_pruebas()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 27701101,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "el sistema mostrara la pagina para el registro de un nuevo usuario",
+            "match": {
+              "location": "PaginaPruebaSteps.clic_se_abre_la_pagina_de_registro()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@navegador"
+          },
+          {
+            "name": "@abrirUrl"
+          }
+        ]
+      }
+    ],
+    "name": "Abrir la pagina para  la compra de productos personales",
+    "description": "",
+    "id": "abrir-la-pagina-para--la-compra-de-productos-personales",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/1.PaginaPrueba.feature",
+    "tags": [
+      {
+        "name": "@navegador",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4846800199,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Haga clic en el boton registrarse",
+            "match": {
+              "location": "InicioSesionSteps.clic_boton_registrarse()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "Recuperar la contraseña de un usuario registrado",
+        "description": "",
+        "id": "iniciar-sesion-en-la-pagina-de-compras;recuperar-la-contraseña-de-un-usuario-registrado;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2604131500,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Hagá clic en el  link para recuperar su contrasena",
+            "match": {
+              "location": "InicioSesionSteps.clic_link_cambiar_contrasens()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 449081300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Ingrese el correo electronico que tiene registrado en el sistema bmmarti8@gmail.com",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bmmarti8@gmail.com",
+                  "offset": 65
+                }
+              ],
+              "location": "InicioSesionSteps.clic_correo_cambio_clave(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1619866899,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Presione por favor el boton recuperar contrasena",
+            "match": {
+              "location": "InicioSesionSteps.clic_boton_recuperar_contrasena()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6727100,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Mostrara el mensaje A confirmation email has been sent to your address:",
+            "match": {
+              "location": "InicioSesionSteps.clic_mensaje_recuperacion_Exitosa()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@recuperarContrasena"
+          }
+        ]
+      }
+    ],
+    "name": "Iniciar sesion en la pagina de compras",
+    "description": "",
+    "id": "iniciar-sesion-en-la-pagina-de-compras",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/2.InicioSesion.feature",
+    "tags": []
+  }
+]

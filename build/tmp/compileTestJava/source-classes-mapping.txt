@@ -1,0 +1,22 @@
+steps/InicioSesionSteps.java
+ steps.InicioSesionSteps
+pages/PaginaPruebaPage.java
+ pages.PaginaPruebaPage
+pages/RegistroUsuarioPage.java
+ pages.RegistroUsuarioPage
+pages/BasePage.java
+ pages.BasePage
+pages/InicioSesionPage.java
+ pages.InicioSesionPage
+pages/LeerArchivo.java
+ pages.LeerArchivo
+pages/BusquedaArticuloPage.java
+ pages.BusquedaArticuloPage
+runner/runner.java
+ runner.runner
+steps/BusquedaArticuloSteps.java
+ steps.BusquedaArticuloSteps
+steps/RegistroUsuarioSteps.java
+ steps.RegistroUsuarioSteps
+steps/PaginaPruebaSteps.java
+ steps.PaginaPruebaSteps

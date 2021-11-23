@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.runner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-V4BNGPO" time="0.0">
+  <properties/>
+  <system-out><![CDATA[
+2 Scenarios (?[32m2 passed?[0m)
+6 Steps (?[32m6 passed?[0m)
+1m19,530s
+
+]]></system-out>
+  <system-err><![CDATA[WARNING: Found tags option '@abrirUrl,@datoscorrecto'. Support for '@tag1,@tag2' will be removed from the next release of Cucumber-JVM. Please use '@tag or @tag2' instead
+]]></system-err>
+</testsuite>
