@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 24085145201,
+              "duration": 29124214100,
               "status": "passed"
             },
             "line": 7,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 27701101,
+              "duration": 3576700,
               "status": "passed"
             },
             "line": 8,
@@ -73,7 +73,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4846800199,
+              "duration": 2534532500,
               "status": "passed"
             },
             "line": 6,
@@ -86,71 +86,151 @@
         ]
       },
       {
-        "line": 38,
-        "name": "Recuperar la contraseña de un usuario registrado",
+        "line": 17,
+        "name": "Iniciar sesion con usuario erroneos",
         "description": "",
-        "id": "iniciar-sesion-en-la-pagina-de-compras;recuperar-la-contraseña-de-un-usuario-registrado;;2",
+        "id": "iniciar-sesion-en-la-pagina-de-compras;iniciar-sesion-con-usuario-erroneos;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2604131500,
+              "duration": 3694774500,
               "status": "passed"
             },
-            "line": 32,
-            "name": "Hagá clic en el  link para recuperar su contrasena",
+            "line": 11,
+            "name": "Por favor diligencie todo los datos del formulario desde la hoja datosincorrectos y el numero de fila 0",
             "match": {
-              "location": "InicioSesionSteps.clic_link_cambiar_contrasens()"
+              "arguments": [
+                {
+                  "val": "datosincorrectos",
+                  "offset": 65
+                },
+                {
+                  "val": "0",
+                  "offset": 102
+                }
+              ],
+              "location": "InicioSesionSteps.escribir_para_buscar_prenda(String,int)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 449081300,
+              "duration": 1273010300,
               "status": "passed"
             },
-            "line": 33,
-            "name": "Ingrese el correo electronico que tiene registrado en el sistema bmmarti8@gmail.com",
+            "line": 12,
+            "name": "Para continuar por favor Haga clic en el boton registrarse",
             "match": {
-              "arguments": [
-                {
-                  "val": "bmmarti8@gmail.com",
-                  "offset": 65
-                }
-              ],
-              "location": "InicioSesionSteps.clic_correo_cambio_clave(String)"
+              "location": "InicioSesionSteps.clic_boton_registrarse_datos_erroneos()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1619866899,
+              "duration": 190448100,
               "status": "passed"
             },
-            "line": 34,
-            "name": "Presione por favor el boton recuperar contrasena",
+            "line": 13,
+            "name": "El sistema mostrara el mensaje Authentication failed.",
             "match": {
-              "location": "InicioSesionSteps.clic_boton_recuperar_contrasena()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6727100,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "Mostrara el mensaje A confirmation email has been sent to your address:",
-            "match": {
-              "location": "InicioSesionSteps.clic_mensaje_recuperacion_Exitosa()"
+              "location": "InicioSesionSteps.clic_mensaje_autenticacion_fallida()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@recuperarContrasena"
+            "name": "@datoserroneos"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1408316900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Haga clic en el boton registrarse",
+            "match": {
+              "location": "InicioSesionSteps.clic_boton_registrarse()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Iniciar sesion con usuario correctos",
+        "description": "",
+        "id": "iniciar-sesion-en-la-pagina-de-compras;iniciar-sesion-con-usuario-correctos;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1023944100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Diligencie por favor  todo los datos del formulario desde la hoja datoscorrectos y el numero de fila 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "datoscorrectos",
+                  "offset": 66
+                },
+                {
+                  "val": "0",
+                  "offset": 101
+                }
+              ],
+              "location": "InicioSesionSteps.escribir_para_ingresar(String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1567865100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Continuar por favor haga clic en el boton registrarse",
+            "match": {
+              "location": "InicioSesionSteps.clic_boton_registrarse_datos_correctos()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2667019300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Se ingresa a la pagina de cliente",
+            "match": {
+              "location": "InicioSesionSteps.clic_pagina_de_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@datoscorrecto"
+          },
+          {
+            "name": "@smoketest"
           }
         ]
       }
@@ -161,5 +241,370 @@
     "keyword": "Feature",
     "uri": "src/test/resources/features/2.InicioSesion.feature",
     "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 20,
+        "name": "Realizar la busqueda de una prenda de vestir",
+        "description": "",
+        "id": "realizar-la-busqueda-de-prenda-de-vestir;realizar-la-busqueda-de-una-prenda-de-vestir;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 409195300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Hacer clic en el recuadro  de busqueda de prendas",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_cuadro_buscar_prenda()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 462319400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Diligencie todo los datos del formulario desde la hoja buscar y el numero de fila 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "buscar",
+                  "offset": 55
+                },
+                {
+                  "val": "0",
+                  "offset": 82
+                }
+              ],
+              "location": "BusquedaArticuloSteps.escribir_para_buscar_prenda(String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9541916400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Hacer clic en el boton buscar",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_boton_buscar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5502120900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Presionar en el carrito para continuar con la compra",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_carrito_compra()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1590541100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Continuar con el proceso de compra",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_continuar_compra()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3357551700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Por favor hacér clic en el boton pasar a caja",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_boton_pasar_caja()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2372958100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Click en el boton continuar compra por favor",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_contiar_compra_pagar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@buscarproducto"
+          },
+          {
+            "name": "@articulo"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Realizar la busqueda de una prenda de vestir",
+        "description": "",
+        "id": "realizar-la-busqueda-de-prenda-de-vestir;realizar-la-busqueda-de-una-prenda-de-vestir;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 177109100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Hacer clic en el recuadro  de busqueda de prendas",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_cuadro_buscar_prenda()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 369057000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Diligencie todo los datos del formulario desde la hoja buscar y el numero de fila 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "buscar",
+                  "offset": 55
+                },
+                {
+                  "val": "1",
+                  "offset": 82
+                }
+              ],
+              "location": "BusquedaArticuloSteps.escribir_para_buscar_prenda(String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5296763600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Hacer clic en el boton buscar",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_boton_buscar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1208566400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Presionar en el carrito para continuar con la compra",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_carrito_compra()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2225385700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Continuar con el proceso de compra",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_continuar_compra()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1550961900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Por favor hacér clic en el boton pasar a caja",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_boton_pasar_caja()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1307714000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Click en el boton continuar compra por favor",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_contiar_compra_pagar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@buscarproducto"
+          },
+          {
+            "name": "@articulo"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "Realizar la busqueda de una prenda de vestir",
+        "description": "",
+        "id": "realizar-la-busqueda-de-prenda-de-vestir;realizar-la-busqueda-de-una-prenda-de-vestir;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 164090000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Hacer clic en el recuadro  de busqueda de prendas",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_cuadro_buscar_prenda()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 351991700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Diligencie todo los datos del formulario desde la hoja buscar y el numero de fila 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "buscar",
+                  "offset": 55
+                },
+                {
+                  "val": "2",
+                  "offset": 82
+                }
+              ],
+              "location": "BusquedaArticuloSteps.escribir_para_buscar_prenda(String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6444850400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Hacer clic en el boton buscar",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_boton_buscar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1450838400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Presionar en el carrito para continuar con la compra",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_carrito_compra()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1229686100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Continuar con el proceso de compra",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_continuar_compra()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1269678500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Por favor hacér clic en el boton pasar a caja",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_boton_pasar_caja()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1715889200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Click en el boton continuar compra por favor",
+            "match": {
+              "location": "BusquedaArticuloSteps.clic_contiar_compra_pagar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@buscarproducto"
+          },
+          {
+            "name": "@articulo"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      }
+    ],
+    "name": "Realizar la busqueda de prenda de vestir",
+    "description": "",
+    "id": "realizar-la-busqueda-de-prenda-de-vestir",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/BusquedaArticulo.feature",
+    "tags": [
+      {
+        "name": "@buscarproducto",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
