@@ -5,7 +5,7 @@ Feature: Iniciar sesion en la pagina de compras
 
  Given Haga clic en el boton registrarse
    
-   @datoserroneos
+   @datoserroneos  @smoketest
    Scenario Outline: Iniciar sesion con usuario erroneos
    
    When  Por favor diligencie todo los datos del formulario desde la hoja <SheetName> y el numero de fila <RowNumber>
@@ -17,7 +17,7 @@ Feature: Iniciar sesion en la pagina de compras
        |datosincorrectos|0|
 
 
-  @datoscorrecto
+  @datoscorrecto @smoketest
   Scenario Outline: Iniciar sesion con usuario correctos
    When Diligencie por favor  todo los datos del formulario desde la hoja <SheetName> y el numero de fila <RowNumber>
    And  Continuar por favor haga clic en el boton registrarse 

@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = "steps", plugin = {
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-        "json:target/cucumber-reports.json" }, tags = {"@abrirUrl, @recuperarContrasena" })
+        "json:target/cucumber-reports.json" }, tags = {"@abrirUrl, @smoketest" })
 public class runner {
     
 }
